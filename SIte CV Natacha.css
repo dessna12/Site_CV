@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root{
+--backgroung-gris: #F9F9F9;
+--menu-gris: #F0F0F0;
+--contour-gris: #D0CECE;
+--brique: #AB5D5D;
+--font-black: #3B3838;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    color: var(--font-black);
+
+}
+
+
+strong{ 
+    color: var(--brique);
+    font-weight: 600;
+}
+
+em{
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Section nav */
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--menu-gris);
+    position: sticky;
+    top: 0px;
+}
+
+nav label{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav ul{
+    display:none;
+    background-color: var(--menu-gris);
+    list-style-type: none;
+    text-align: inherit;
+}
+
+
+nav input[type=checkbox]{
+    display: none;
+}
+
+.burger{
+    padding: 5px;
+    color: black;
+}
+
+
+nav input[type=checkbox]:checked + ul {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5px 15px;
+    text-align: right;
+
+}
+
+
+#accueil{
+    height: calc(100vh - 40px);
+    background-color: var(--backgroung-gris);
+    line-height: 1.5em;
+    border: #3B3838 solid 1px;
+    display: flexbox;
+}
+
+#accueil> p,h1{
+
+    padding: 5px 15px;
+}
+
+h1{
+
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: xx-large;
+}
+
+#image-cover{
+    width: 100vw;
+
+}
+
+.bloc{
+    display: block;
+}
+
+.Amsterdam{
+    width: 100%;
+}
+
+.sous-titre{
+    margin-top: 15px;
+    font-size: larger;
+}
+
+
+#accueil .boutons{
+    margin-top: 1em;
+    justify-content: right;
+    display: flex;
+    border: #3B3838 solid 1px;
+}
+
+
+
+
+#accueil .bouton a{
+
+    display: flex;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    padding: 7px 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+#accueil .rouge a{
+    color: whitesmoke ;
+    background-color: var(--brique);
+    border: var(--font-black) solid 2px;
+
+}
+
+#accueil .blanc a{
+    color: var(--font-black) ;
+    background-color: inherit;
+    border: var(--brique) solid 2px;
+
+}
+
+#parcours{
+    position: relative;
+    display: flexbox;
+    height: calc(100vh - 40px);
+    background-color: var(--backgroung-gris);
+    line-height: 1.5em;
+    border: #3B3838 SOLID 2px;
+}
+
+
+
+@media screen {
+    
+}

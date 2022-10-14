@@ -26,7 +26,6 @@
 html{
     scroll-behavior: smooth;
     color: var(--font-black);
-
 }
 
 
@@ -40,13 +39,15 @@ em{
     font-style: normal;
 }
 
+
+
 /* Section nav */
 
 nav{
     width: 100%;
     margin: 0 auto;
     background-color: var(--menu-gris);
-    position: sticky;
+    position:fixed;
     top: 0px;
 }
 
@@ -90,14 +91,14 @@ nav input[type=checkbox]:checked + ul {
 
 
 #accueil{
-    height: calc(100vh - 40px);
+    margin-top: 36px;
+    height: 100vh;
     background-color: var(--backgroung-gris);
     line-height: 1.5em;
-    border: #3B3838 solid 1px;
+    border-top: #3B3838 solid 1px;
     display: flexbox;
     flex-direction: row;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
 
 #accueil> p,h1{
@@ -134,12 +135,6 @@ h1{
     flex-shrink: 1;
 }
 
-.Amsterdam{
-    width: 100%;
-    flex-basis: 100%;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
 
 .sous-titre{
     margin-top: 15px;
@@ -151,14 +146,12 @@ h1{
     margin-top: 1em;
     justify-content: right;
     display: flex;
-    border: #3B3838 solid 1px;
 }
 
 
 
 
 #accueil .bouton a{
-
     display: flex;
     margin: 0 0.5rem;
     text-transform: uppercase;
@@ -175,24 +168,81 @@ h1{
     color: whitesmoke ;
     background-color: var(--brique);
     border: var(--font-black) solid 2px;
-
 }
 
 #accueil .blanc a{
     color: var(--font-black) ;
     background-color: inherit;
     border: var(--brique) solid 2px;
-
 }
 
+/* SECTION PARCOURS */
 #parcours{
-    position: relative;
+    position: static;
     display: flexbox;
-    height: calc(100vh - 40px);
+    flex-direction: row;
+    height: calc(100vh - 38px);
     background-color: var(--backgroung-gris);
     line-height: 1.5em;
-    border: #3B3838 SOLID 2px;
+    border: #3B3838 solid 2px;
 }
+
+.titre{
+    margin: 20px 10px;
+    width: 85%; 
+}
+
+section h2{
+    color: var(--brique);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom:#AB5D5D solid 5px;
+    padding: 10px;
+
+}
+
+ .decalage{
+    width: 12%;
+    height: 5px;
+    margin-top: -5px;
+    position: relative;
+}
+
+.gris{
+    background-color: var(--backgroung-gris);
+}
+
+.main-text{
+    margin: 0px 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-text p{
+    display: block;
+    flex-grow: 1;
+}
+
+
+
+/* SECTION COMPETENCES */
+#competences{
+    position: relative;
+    display: flexbox;
+    flex-direction: row;
+    height: calc(100vh - 40px);
+    background-color: var(--font-black);
+    line-height: 1.5em;
+    border: #3B3838 solid;
+}
+
+.noir{
+    background-color: var(--font-black);
+}
+
 
 
 

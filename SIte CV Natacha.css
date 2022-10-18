@@ -48,13 +48,28 @@ nav{
     margin: 0 auto;
     background-color: var(--menu-gris);
     position:fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: right;
     top: 0px;
 }
 
+#photo-profile{
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    border: #3B3838 solid 1px;
+
+}
+
 nav label{
+    border: #AB5D5D solid;
     display: inline-block;
-    width: 100%;
     text-align: right;
+    position: relative;
 }
 
 nav a {
@@ -86,10 +101,10 @@ nav input[type=checkbox]:checked + ul {
     flex-flow: column wrap;
     padding: 5px 15px;
     text-align: right;
-
+    
 }
 
-
+/* SECTION ACCUEIL */
 #accueil{
     margin-top: 36px;
     height: 100vh;
@@ -111,6 +126,11 @@ h1{
     margin-top: 15px;
     font-weight: 600;
     font-size: xx-large;
+}
+
+.titre-h2{
+    font-weight: 400;
+    font-size: large;
 }
 
 
@@ -160,18 +180,18 @@ h1{
     text-align: center;
     width: 100px;
     padding: 7px 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     transition: 0.5s;
 }
 
 #accueil .rouge a{
     color: whitesmoke ;
     background-color: var(--brique);
-    border: var(--font-black) solid 2px;
+    border: var(--brique) solid 2px;
 }
 
 #accueil .blanc a{
-    color: var(--font-black) ;
+    color: var(--brique) ;
     background-color: inherit;
     border: var(--brique) solid 2px;
 }
@@ -219,6 +239,7 @@ section h2{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 1;
 }
 
 .main-text p{
@@ -237,13 +258,20 @@ section h2{
     background-color: var(--font-black);
     line-height: 1.5em;
     border: #3B3838 solid;
+    z-index: 0;
 }
 
 .noir{
     background-color: var(--font-black);
 }
 
+.blanc{
+    color: #F0F0F0;
+}
 
+#competences h4{
+    color:var(--brique);
+}
 
 
 @media screen {

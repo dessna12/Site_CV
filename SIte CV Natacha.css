@@ -353,6 +353,7 @@ h3{
 @media screen and (min-width: 980px){
     #image-cover{
         background-image:url("img/JB7A0519_L.jpg");
-        height: 65%;    
+        height: 65%;
+        background-position: center;    
     }
 }

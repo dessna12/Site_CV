@@ -40,9 +40,9 @@ em{
 }
 
 
-
-/* Section nav */
-
+/**********************/
+/* SECTION NAVIGATION */
+/*********************/
 nav{
     width: 100%;
     margin: 0 auto;
@@ -126,7 +126,9 @@ nav input[type=checkbox]:checked + ul {
     transition: 0,5s;
 }
 
+/********************/
 /* SECTION ACCUEIL */
+/********************/
 #accueil{
     margin-top: 36px;
     height: calc(100vh - 36px);
@@ -191,8 +193,9 @@ h1{
     display: flex;
 }
 
-
-
+#accueil .bouton .rouge{
+    transform: translateX(-150px);
+}
 
 #accueil .bouton a{
     display: flex;
@@ -204,8 +207,20 @@ h1{
     width: 100px;
     padding: 7px 20px;
     border-radius: 10px;
-    transition: 0.5s;
+
 }
+
+.reveal{
+    position: relative;
+    transform: translateX(150px);
+    transition: 1s ease-in-out;
+}
+
+.reveal.active{
+    transform: translateX(0);
+}
+
+
 
 #accueil .rouge a{
     color: whitesmoke ;
@@ -219,7 +234,14 @@ h1{
     border: var(--brique) solid 2px;
 }
 
+
+
+
+
+/********************/
 /* SECTION PARCOURS */
+/********************/
+
 #parcours{
     position: static;
     display: flexbox;

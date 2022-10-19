@@ -13,13 +13,13 @@
     
     <!--MENU DEROULANT -->
     <nav>
-        <div id="photo-profile"></div>
+        <div id="photo-profile"><img src="img\JB7A0519_xs.jpg" alt="profile Natacha Desse"></div>
         <div id="burger-menu">
             <label for="mobile"><span class="material-symbols-outlined burger">menu</span></label>
             <input type="checkbox" id="mobile" role="button">
             <ul>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#repère-parcours">Parcours</a></li>
+                <li><a href="#repère-compétences">Compétences</a></li>
                 <li><a href="#">Cursus Académique</a></li>
                 <li><a href="#">Expérience Pro</a></li>
                 <li><a href="#">Centres d'intérêt</a></li>
@@ -53,7 +53,7 @@
 
     <!--Section parcours -->
     <section id="parcours">
-
+    <div id="repère-parcours" class="repère"></div>
     <div class="titre"> 
         <h2>Parcours</h2>
         <div class="decalage gris"></div>
@@ -80,40 +80,69 @@
 
     <!--SECTION COMPETENCES -->
     <section id="competences">
+        <div id="repère-compétences" class="repère"></div>
         <div class="titre">
             <h2>Compétences</h2>
             <div class="decalage noir"></div>
         </div>
-        <br>
     
         <div class="main-text blanc">
             <h3>Langages de programmation</h3>
             <br>
             
+            <div class="bloc-compétences">
             <h4>R</h4>
-            <p>
                 <ul>
                     <li>Explication de comportements financiers par facteurs (régressions pénalisées)</li>
                     <li>Modélisation par clustering </li>
                     <li>Modélisation de scénarios capital retraite en fonction de conditions de marchés</li>
                 </ul>
-            </p>
+            </div>
 
+            <div class="bloc-compétences">
             <h4>HTML/CSS</h4>
-            <p>Conception de sites web</p>
-            <p>Utilisation de Responsive Design</p>
+            <ul>
+                <li>Conception de sites web</li>
+                <li>Utilisation de Responsive Design</li>
+            </ul>
+            </div>
 
+            <div class="bloc-compétences">           
             <h4>Javascript et Java</h4>
-            <p>Javascript pour le Web</p>
-            <p>Java EE</p>
+            <ul>
+                <li>Javascript pour le Web</li>
+                <li>Java EE</li>
+            </ul>
+            </div>
 
+            <div class="bloc-compétences">
             <h4>Git/ Linux/ SQL</h4>
             <p>Bonne utilisation</p>
+            </div>            
 
+
+            <div class="bloc-compétences">
             <h4>Docker</h4>
-            <p>Bonne notions</p>
+            <p>Bonnes notions</p>
+            </div>
 
-            <h3>Langues parlées</h3>
+            <div class="bloc-langue">
+                <h3>Langues parlées</h3>
+                <div class="langues-parlées">
+                    <div class="langue francais">
+                        <h4>Français</h4>
+                        <p>Native</p>
+                    </div>
+                    <div class="langue anglais">
+                        <h4>Anglais</h4>
+                        <p>Bilingue</p>
+                    </div>
+                    <div class="langue espagnol">
+                        <h4>Espagnol</h4>
+                        <p>Courant</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 

@@ -53,6 +53,7 @@ nav{
     align-items: top;
     justify-content: right;
     top: 0px;
+    transition: 0,5s;
 }
 
 #photo-profile{
@@ -61,15 +62,30 @@ nav{
     height: 30px;
     background-color: black;
     border-radius: 50%;
-    border: #3B3838 solid 1px;
+    overflow: hidden;
+    top: 2px;
+}
 
+#photo-profile img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#burger-menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 nav label{
-    border: #AB5D5D solid;
     display: inline-block;
     text-align: right;
     position: relative;
+    cursor: pointer;
 }
 
 nav a {
@@ -88,11 +104,17 @@ nav ul{
 
 nav input[type=checkbox]{
     display: none;
+    transition: 0,5s;
 }
 
 .burger{
     padding: 5px;
     color: black;
+    display: block;
+    position: relative;
+    justify-content: right;
+    place-self: right;
+
 }
 
 
@@ -101,13 +123,13 @@ nav input[type=checkbox]:checked + ul {
     flex-flow: column wrap;
     padding: 5px 15px;
     text-align: right;
-    
+    transition: 0,5s;
 }
 
 /* SECTION ACCUEIL */
 #accueil{
     margin-top: 36px;
-    height: 100vh;
+    height: calc(100vh - 36px);
     background-color: var(--backgroung-gris);
     line-height: 1.5em;
     border-top: #3B3838 solid 1px;
@@ -164,6 +186,7 @@ h1{
 
 #accueil .boutons{
     margin-top: 1em;
+    margin-right: 0.7em;
     justify-content: right;
     display: flex;
 }
@@ -207,6 +230,11 @@ h1{
     border: #3B3838 solid 2px;
 }
 
+.repère{
+    position: relative;
+    top: -36px;
+}
+
 .titre{
     margin: 20px 10px;
     width: 85%; 
@@ -218,14 +246,13 @@ section h2{
     text-transform: uppercase;
     border-bottom:#AB5D5D solid 5px;
     padding: 10px;
-
 }
 
  .decalage{
     width: 12%;
     height: 5px;
     margin-top: -5px;
-    position: relative;
+    position: static;
 }
 
 .gris{
@@ -239,7 +266,6 @@ section h2{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1;
 }
 
 .main-text p{
@@ -251,7 +277,7 @@ section h2{
 
 /* SECTION COMPETENCES */
 #competences{
-    position: relative;
+    position: static;
     display: flexbox;
     flex-direction: row;
     height: calc(100vh - 40px);
@@ -269,11 +295,64 @@ section h2{
     color: #F0F0F0;
 }
 
+.bloc-compétences{
+    display: block;
+    width: 100%;
+}
+
 #competences h4{
     color:var(--brique);
+    border: #AB5D5D solid 1px;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 
-@media screen {
-    
+
+.langues-parlées{
+    display: flex;
+    flex: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.langue{
+    text-align: center;
+}
+
+
+.main-text li{
+    border: #AB5D5D 1px solid;
+    list-style: none;
+}
+
+.bloc-langue{
+    margin-top: 15px;
+    border: #AB5D5D solid 1px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    padding: 0.5em;
+}
+
+
+/*Styles spécifiques pour les écrans de taille moyenne type tablette*/
+@media screen and (min-width: 780px) and (max-width: 979px){
+    #image-cover{
+        background-image:url("img/JB7A0519.jpg");    
+    }
+}
+
+
+
+/*Styles spécifiques pour les grands écrans type écrans d'ordinateur*/
+@media screen and (min-width: 980px){
+    #image-cover{
+        background-image:url("img/JB7A0519_L.jpg");
+        height: 65%;    
+    }
 }

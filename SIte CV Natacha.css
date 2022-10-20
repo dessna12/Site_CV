@@ -207,6 +207,7 @@ h1{
 
 }
 
+/*  Section animation
 .reveal.rouge{
     position: relative;
     left: 300px;
@@ -215,7 +216,7 @@ h1{
     transition-delay: 2s;
 }
 
-/*
+
 .reveal.blanc{
     position: relative;
     transform: translateX(200px);

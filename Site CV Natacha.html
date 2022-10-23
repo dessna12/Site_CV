@@ -18,12 +18,12 @@
             <label for="mobile"><span class="material-symbols-outlined burger">menu</span></label>
             <input type="checkbox" id="mobile" role="button">
             <ul>
-                <li><a href="#repère-parcours">Parcours</a></li>
-                <li><a href="#repère-compétences">Compétences</a></li>
-                <li><a href="#">Cursus Académique</a></li>
-                <li><a href="#">Expérience Pro</a></li>
-                <li><a href="#">Centres d'intérêt</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#repère-parcours" class="element-menu">Parcours</a></li>
+                <li><a href="#repère-compétences" class="element-menu">Compétences</a></li>
+                <li><a href="#repère-cursus" class="element-menu">Cursus Académique</a></li>
+                <li><a href="#" class="element-menu">Expérience Pro</a></li>
+                <li><a href="#" class="element-menu">Centres d'intérêt</a></li>
+                <li><a href="#" class="element-menu">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -34,14 +34,14 @@
         <h1>Moi c'est Natacha Desse.</h1>
         <p class="titre-h2"><strong>Développeuse</strong> en formation <strong> Front/Back</strong></p>
 
-        <div id="image-cover" class="flex">
+        <div id="image-cover" class="flex ease">
             <!-- Ajouter ici les différentes sources selon media port-->
             <!--<img  class= "Amsterdam flex" src="img/JB7A0519_s.jpg" alt="Natacha Desse"> -->
         </div>
 
         <p class="sous-titre"><em>A la recherche</em> de ma <em>prochaine</em> <strong>collaboration professionnelle</strong> dans le domaine de la <em>programmation.</em> 
         </p>
-        <p><strong>Développeuse</strong>, ancienne <em>cheffe de projets</em> et <em>analyste quant</em> en finance
+        <p class="sous-titre2"><strong>Développeuse</strong>, ancienne <em>cheffe de projets</em> et <em>analyste quant</em> en finance
         </p>
 
         <div class="boutons"> 
@@ -143,10 +143,68 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section id="cursus">
+        <div id="repère-cursus" class="repère"></div>       
+        <div class="titre"> 
+            <h2>Cursus académique</h2>
+            <div class="decalage gris"></div>
         </div>
 
+        <div class="main-text">
+            <div class="item-cursus reveal">
+                <h3>Formation HTML/CSS</h3>
+                <p>2022</p>
+                <h4>Sebell formation</h4>
+                <br>
+                <p><em>Principaux modules:</em>  Modèle des boîtes, Insertion de média, Selecteurs CSS complexes, Animations, Responsive design, Sémantique
+                </p>
+            </div>
+
+            <div class="item-cursus reveal">
+                <h3>Master 2 – 222 Asset Management</h3>
+                <p>2017-2018</p>
+                <h4>Université Paris Dauphine</h4>
+                <br>
+                <p><em>Principaux cours:</em>  Construction de Portefeuille, Gestion indicielle, Gestion Alternative, Analyse Financière, Produits Structurés, Arbitrage de Volatilité</p>
+            </div>
+
+            <div class="item-cursus reveal">
+                <h3>Master 1 - Finance</h3>
+                <p>2015 – 2016</p>
+                <h4>Université Paris Dauphine</h4>
+                <br>
+                <p><em>Principaux cours:</em>  Finance de marché, Econométrie, Marché Actions/ Marché Taux, Finance d’entreprise, Dérivés</p>
+                <br>
+                <p><em>Mémoire :</em>  L’impact des FinTechs sur la gestion d’actif en France 
+                </p>
+            </div>            
+        </div>
     </section>
+
+    <section id="cursus2">
+        <div class="main-text">
+            <div class="item-cursus reveal">
+                <h3>L3 - Management</h3>
+                <p>2014 – 2015</p>
+                <h4>Université Paris Dauphine</h4>
+                <br>
+                <p><em>Principaux cours :</em>  Finance, Comptabilité, Fiscalité, Droit du travail, Statistiques, Marketing</p>
+            </div>
+
+            <div class="item-cursus reveal">
+                <h3>L2 – Diplôme d’Economie et de Gestion Appliqué à Dauphine (DEGEAD) </h3>
+                <p>2012- 2014</p>
+                <h4>Université Paris Dauphine</h4>
+                <br>
+                <p>Diplôme 2ème année en Economie et Management</p>
+            </div>
+    </section>
+
+
+
 
 <script src="Site CV Natacha.js"></script>
 </body>

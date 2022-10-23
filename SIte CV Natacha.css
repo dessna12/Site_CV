@@ -40,9 +40,9 @@ em{
 }
 
 
-
-/* Section nav */
-
+/**********************/
+/* SECTION NAVIGATION */
+/*********************/
 nav{
     width: 100%;
     margin: 0 auto;
@@ -54,6 +54,7 @@ nav{
     justify-content: right;
     top: 0px;
     transition: 0,5s;
+    z-index: 1;
 }
 
 #photo-profile{
@@ -126,7 +127,9 @@ nav input[type=checkbox]:checked + ul {
     transition: 0,5s;
 }
 
+/********************/
 /* SECTION ACCUEIL */
+/********************/
 #accueil{
     margin-top: 36px;
     height: calc(100vh - 36px);
@@ -139,20 +142,32 @@ nav input[type=checkbox]:checked + ul {
 }
 
 #accueil> p,h1{
-
     padding: 5px 15px;
 }
 
 h1{
-
+    position: relative;
     margin-top: 15px;
     font-weight: 600;
     font-size: xx-large;
+    
+    animation: showBottomText 0.5s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+    opacity: 0;
 }
 
 .titre-h2{
     font-weight: 400;
     font-size: large;
+    animation: showTopText 0.5s;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+    opacity: 0;
 }
 
 
@@ -164,7 +179,7 @@ h1{
     background-repeat: no-repeat;
     background-origin: border-box;
     background-position: bottom;
-
+    animation: opacity 0.2s;
 }
 
 .bloc{
@@ -181,8 +196,14 @@ h1{
 .sous-titre{
     margin-top: 15px;
     font-size: larger;
+    animation: opacity 1s ease 2s forwards;
+    opacity: 0;
 }
 
+.sous-titre2{
+    animation: opacity 1s ease 2.4s forwards;
+    opacity: 0;
+}
 
 #accueil .boutons{
     margin-top: 1em;
@@ -190,8 +211,6 @@ h1{
     justify-content: right;
     display: flex;
 }
-
-
 
 
 #accueil .bouton a{
@@ -204,8 +223,10 @@ h1{
     width: 100px;
     padding: 7px 20px;
     border-radius: 10px;
-    transition: 0.5s;
+
 }
+
+
 
 #accueil .rouge a{
     color: whitesmoke ;
@@ -219,7 +240,14 @@ h1{
     border: var(--brique) solid 2px;
 }
 
+
+
+
+
+/********************/
 /* SECTION PARCOURS */
+/********************/
+
 #parcours{
     position: static;
     display: flexbox;
@@ -302,7 +330,6 @@ section h2{
 
 #competences h4{
     color:var(--brique);
-    border: #AB5D5D solid 1px;
     text-align: center;
     display: block;
     width: 100%;
@@ -323,21 +350,138 @@ section h2{
 
 
 .main-text li{
-    border: #AB5D5D 1px solid;
     list-style: none;
 }
 
 .bloc-langue{
     margin-top: 15px;
-    border: #AB5D5D solid 1px;
     display: block;
     width: 100%;
     text-align: center;
 }
 
 h3{
-    padding: 0.5em;
+    padding-bottom: 0.5em;
 }
+
+/********************/
+/* SECTION CURSUS */
+/********************/
+
+#cursus{
+    position: static;
+    display: flexbox;
+    flex-direction: row;
+    height: calc(100vh - 38px);
+    background-color: var(--backgroung-gris);
+    line-height: 1.5em;
+}
+
+
+#cursus > .main-text{
+    justify-content: space-between;
+    height: 90%;
+    padding-top: 10px;
+
+}
+
+.item-cursus{
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+    border: solid 1px rgba(160, 160, 160, 0.568);
+    padding: 10px;
+    align-items:initial;
+    margin-bottom: 20px;
+    font-size: smaller;
+    line-height: 1.5em;
+}
+
+.item-cursus > h4{
+    color: #AB5D5D;
+}
+
+
+
+
+
+/*Section animation*/
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    50% {opacity: 0.5;}
+    100% { transform: translate3d(0, 0, 0); opacity: 1; }
+  }
+
+  @keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    50% {opacity: 0.5;}
+    100% { transform: translate3d(0, 0, 0); opacity: 1; }
+  }
+
+  @keyframes opacity {
+    0% { opacity: 0; }
+    50% {opacity: 0.3;}
+    100% { opacity: 1; }
+  }
+
+
+  /* non utilisées*/
+  @keyframes translation {
+    0% {
+      transform: perspective(100px) translate3d(0px, 0px, -20px);
+      opacity: 0.2;
+    }
+    100%{
+        transform: perspective(100px) translate3d(0px, 0px, 0px)  
+    }
+}
+
+    @keyframes showTopImage {
+        0% { transform: translate3d(-15%, 0, 0); opacity: 0; }
+        50% {opacity: 0.5;}
+        100% { transform: translate3d(0, 0, 0); opacity: 1; }
+    }
+
+
+
+/*.reveal.rouge{
+    position: relative;
+    left: 300px;
+    transform: translateX(-300px);
+    transition: 0.5s linear;
+    transition-delay: 2s;
+}
+
+
+.reveal.blanc{
+    position: relative;
+    transform: translateX(200px);
+    transition: 0.5s linear;
+}
+
+.reveal.rouge.active{
+    transform: translateX(0);
+}
+
+.reveal.rouge.active{
+    transform: translateX(0);
+}
+*/
+
+
 
 
 /*Styles spécifiques pour les écrans de taille moyenne type tablette*/

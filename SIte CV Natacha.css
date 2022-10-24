@@ -229,6 +229,8 @@ p{
     position: relative;
     border: red solid 1px;
     margin-bottom: 3px;
+    opacity: 0;
+    animation: opacity 1.2s linear 1.9s forwards;
 }
 
 
@@ -260,17 +262,16 @@ p{
 
 
 
-
-
 /********************/
 /* SECTION PARCOURS */
 /********************/
 
 #parcours{
     position: static;
-    display: flexbox;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 38px);
+    min-height: 500px;
     background-color: var(--backgroung-gris);
     line-height: 1.5em;
     border: #3B3838 solid 2px;
@@ -282,11 +283,13 @@ p{
 }
 
 .titre{
+    border: red solid 1px;
     margin: 20px 10px;
     width: 85%; 
 }
 
 section h2{
+    border: red solid 1px;
     color: var(--brique);
     font-weight: 600;
     text-transform: uppercase;
@@ -306,17 +309,22 @@ section h2{
 }
 
 .main-text{
+    position: relative;
     margin: 0px 20px;
     height: 80%;
+    font-size: calc(0.75rem + 0.7vw);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border: red solid 1px;
 }
 
 .main-text p{
     display: block;
     flex-grow: 1;
+    position: relative;
+    border: #AB5D5D solid 1px;
 }
 
 

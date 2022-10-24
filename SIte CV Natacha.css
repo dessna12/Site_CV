@@ -26,6 +26,7 @@
 html{
     scroll-behavior: smooth;
     color: var(--font-black);
+    font-size: calc(15px + 0.390625vw);
 }
 
 
@@ -147,11 +148,17 @@ nav input[type=checkbox]:checked + ul {
     padding: 3px 15px;
 }
 
+
+.accueil-bloc1{
+    position: relative;
+    
+}
+
 h1{
     position: relative;
     margin-top: 5px;
     font-weight: 600;
-    font-size: x-large;
+    font-size: 1.9rem;
     animation: showBottomText 0.5s;
     animation-delay: 0.8s;
     animation-fill-mode: forwards;
@@ -164,8 +171,7 @@ h1{
 
 .titre-h2{
     position: relative;
-    font-weight: 400;
-    font-size: large;
+    font-size: 1.1rem;
     animation: showTopText 0.5s;
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
@@ -217,7 +223,6 @@ p{
 }
 
 #accueil .boutons{
-    margin-top: 1em;
     margin-right: 0.7em;
     justify-content: right;
     display: flex;

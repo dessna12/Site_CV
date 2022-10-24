@@ -135,13 +135,12 @@ nav input[type=checkbox]:checked + ul {
     margin-top: 36px;
     height: calc(100vh - 36px);
     background-color: var(--backgroung-gris);
-    line-height: 1.1em;
+    line-height: 1.1rem;
     border-top: #3B3838 solid 1px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     justify-content: space-around;
-    border: red solid 1px;  
 }
 
 #accueil> p,h1{
@@ -165,7 +164,6 @@ h1{
     top: 0;
     transform: translate(0, -100%);
     opacity: 0;
-    border: red solid 1px;
 }
 
 
@@ -178,7 +176,6 @@ h1{
     top: 0;
     transform: translate(0, -100%);
     opacity: 0;
-    border: red solid 1px;
 }
 
 p{
@@ -213,21 +210,18 @@ p{
     margin-top: 0px;
     animation: opacity 1s ease 1.7s forwards;
     opacity: 0;
-    border: red solid 1px;
     font-size: 1rem;
 }
 
 .sous-titre2{
     animation: opacity 1s ease 1.7s forwards;
     opacity: 0;
-    border: red solid 1px;
 }
 
 #accueil .boutons{
     justify-content: right;
     display: flex;
     position: relative;
-    border: red solid 1px;
     margin-bottom: 3px;
     opacity: 0;
     animation: opacity 1.2s linear 1.9s forwards;
@@ -267,13 +261,13 @@ p{
 /********************/
 
 #parcours{
-    position: static;
+    position: relative;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 38px);
     min-height: 500px;
     background-color: var(--backgroung-gris);
-    line-height: 1.5em;
+    line-height: 1.5rem;
     border: #3B3838 solid 2px;
 }
 
@@ -283,9 +277,12 @@ p{
 }
 
 .titre{
+    position: relative; /* absolute*/
+    top:0;
     border: red solid 1px;
     margin: 20px 10px;
-    width: 85%; 
+    width: 85%;
+    display: block;
 }
 
 section h2{
@@ -310,31 +307,36 @@ section h2{
 
 .main-text{
     position: relative;
+    justify-self: space-around;
     margin: 0px 20px;
-    height: 80%;
+    flex-basis: 80%;
+    flex-shrink: 1;
+    flex-grow: 0;
     font-size: calc(0.75rem + 0.7vw);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    border: red solid 1px;
+    border: blue solid 1px;
 }
 
 .main-text p{
     display: block;
     flex-grow: 1;
+    line-height: calc(0.7rem + 1.3vh);
     position: relative;
-    border: #AB5D5D solid 1px;
+    border: red solid 1px;
 }
 
 
 
 /* SECTION COMPETENCES */
 #competences{
-    position: static;
-    display: flexbox;
-    flex-direction: row;
-    height: calc(100vh - 40px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 38px);
+    min-height: 500px;
     background-color: var(--font-black);
     line-height: 1.5em;
     border: #3B3838 solid;
@@ -349,9 +351,24 @@ section h2{
     color: #F0F0F0;
 }
 
+.bloc-compétence{
+    display: flex;
+    flex-direction: column;
+    border: yellow 1px solid;
+    justify-content: space-between;
+}
+
+h3{
+    padding-bottom: 0.5em;
+    border: orange solid 1px;
+    text-align: center;
+}
+
+
 .bloc-compétences{
     display: block;
     width: 100%;
+    border: red solid 1px;
 }
 
 #competences h4{
@@ -386,9 +403,6 @@ section h2{
     text-align: center;
 }
 
-h3{
-    padding-bottom: 0.5em;
-}
 
 /********************/
 /* SECTION CURSUS */

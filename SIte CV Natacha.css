@@ -157,8 +157,8 @@ nav input[type=checkbox]:checked + ul {
 h1{
     position: relative;
     margin-top: 5px;
-    font-weight: 600;
-    font-size: 1.7rem;
+    font-weight: 550;
+    font-size: 1.55rem;
     animation: showBottomText 0.5s;
     animation-delay: 0.8s;
     animation-fill-mode: forwards;

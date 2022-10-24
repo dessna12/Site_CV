@@ -309,15 +309,16 @@ section h2{
     position: relative;
     justify-self: space-around;
     margin: 0px 20px;
-    flex-basis: 80%;
+    flex-basis: 85%;
     flex-shrink: 1;
     flex-grow: 0;
     font-size: calc(0.75rem + 0.7vw);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border: blue solid 1px;
+    line-height: calc(0.7rem + 1.3vh);
 }
 
 .main-text p{
@@ -341,6 +342,7 @@ section h2{
     line-height: 1.5em;
     border: #3B3838 solid;
     z-index: 0;
+    box-sizing: border-box;
 }
 
 .noir{
@@ -351,15 +353,18 @@ section h2{
     color: #F0F0F0;
 }
 
+
 .bloc-compétence{
     display: flex;
     flex-direction: column;
     border: yellow 1px solid;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 h3{
-    padding-bottom: 0.5em;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
     border: orange solid 1px;
     text-align: center;
 }
@@ -397,7 +402,6 @@ h3{
 }
 
 .bloc-langue{
-    margin-top: 15px;
     display: block;
     width: 100%;
     text-align: center;
@@ -409,10 +413,10 @@ h3{
 /********************/
 
 #cursus{
-    position: static;
-    display: flexbox;
-    flex-direction: row;
-    height: calc(100vh - 38px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(2*(100vh - 38px));
     background-color: var(--backgroung-gris);
     line-height: 1.5em;
 }
@@ -441,12 +445,18 @@ h3{
     color: #AB5D5D;
 }
 
+
+
+
+
+
+
 /* SECTION EXPERIENCE PRO */
 #experience-pro{
-    position: static;
-    display: flexbox;
-    flex-direction: row;
-    height: calc(100vh - 40px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 38px);
     background-color: var(--font-black);
     line-height: 1.5em;
     border: #3B3838 solid;

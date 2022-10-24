@@ -67,10 +67,11 @@ function reveal() {
       trigger: ".decalage",
       start: "top 40%",
       end: "top 5%",
+      toggleActions: "restart none reverse reset",
       scrub: 0.6,
       markers: false
     },
-    x: 300,
+    x: 170,
     rotation: 0,
     transformOrigin: "center center", 
     ease: "linear"

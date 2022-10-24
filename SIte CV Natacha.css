@@ -156,9 +156,9 @@ nav input[type=checkbox]:checked + ul {
 
 h1{
     position: relative;
-    margin-top: 5px;
+    margin-top: 0px;
     font-weight: 550;
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     animation: showBottomText 0.5s;
     animation-delay: 0.8s;
     animation-fill-mode: forwards;
@@ -210,10 +210,11 @@ p{
 
 .sous-titre{
     display: relative;
-    margin-top: 10px;
+    margin-top: 0px;
     animation: opacity 1s ease 1.7s forwards;
     opacity: 0;
     border: red solid 1px;
+    font-size: 1rem;
 }
 
 .sous-titre2{
@@ -223,25 +224,24 @@ p{
 }
 
 #accueil .boutons{
-    margin-right: 0.7em;
     justify-content: right;
     display: flex;
     position: relative;
     border: red solid 1px;
+    margin-bottom: 3px;
 }
 
 
 #accueil .bouton a{
     display: flex;
-    margin: 0 0.5rem;
+    margin-right: 0.8rem;
     text-transform: uppercase;
     text-decoration: none;
     justify-content: center;
     text-align: center;
     width: 100px;
-    padding: 7px 20px;
+    padding: calc(4px + 0.6vh) 10px; /* 7px c'est pas mal */ 
     border-radius: 10px;
-
 }
 
 

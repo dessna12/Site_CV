@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 //GET ACCESS DOM
 const elementMenu = document.querySelectorAll("a.element-menu");
 const burgerMenu = document.querySelector("span.material-symbols-outlined");
@@ -44,7 +46,34 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
+//GSAP
 
+  gsap.to(".box", {
+    scrollTrigger: {
+      trigger: ".box",
+      start: "top 75%",
+      end: "top 25%",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 50,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "Power2.easeInOut"
+  });
 
+  gsap.to(".decalage", {
+    scrollTrigger:{
+      trigger: ".decalage",
+      start: "top 40%",
+      end: "top 5%",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 300,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "linear"
+  });
 
 

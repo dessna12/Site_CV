@@ -46,6 +46,29 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
+
+function appear() {
+  var appears = document.querySelectorAll(".appear");
+
+  for(let i = 0; i < appears.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = appears[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      appears[i].classList.add("active");
+    }else{
+      appears[i].classList.remove("active")
+    }
+  }
+}
+
+window.addEventListener("scroll", appear);
+
+
+
+
+
 //GSAP
 
   gsap.to(".box", {
@@ -62,19 +85,50 @@ function reveal() {
     ease: "Power2.easeInOut"
   });
 
-  gsap.to(".decalage", {
+  gsap.to(".actionDecalageParcours", {
     scrollTrigger:{
-      trigger: ".decalage",
-      start: "top 40%",
-      end: "top 5%",
+      trigger: ".actionDecalageParcours",
+      start: "top 75%",
+      end: "top 40%",
       toggleActions: "restart none reverse reset",
       scrub: 0.6,
       markers: false
     },
-    x: 170,
+    x: 220,
     rotation: 0,
     transformOrigin: "center center", 
     ease: "linear"
   });
+
+  gsap.to(".actionDecalageCompetences", {
+    scrollTrigger:{
+      trigger: ".actionDecalageCompetences",
+      start: "top 75%",
+      end: "top 40%",
+      toggleActions: "restart none reverse reset",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 220,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "linear"
+  });
+
+  gsap.to(".actionDecalageCursus", {
+    scrollTrigger:{
+      trigger: ".actionDecalageCursus",
+      start: "top 75%",
+      end: "top 40%",
+      toggleActions: "restart none reverse reset",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 220,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "linear"
+  });
+
 
 

@@ -89,12 +89,12 @@ window.addEventListener("scroll", appear);
     scrollTrigger:{
       trigger: ".actionDecalageParcours",
       start: "top 75%",
-      end: "top 40%",
+      end: "top 55%",
       toggleActions: "restart none reverse reset",
       scrub: 0.6,
       markers: false
     },
-    x: 220,
+    x: 140,
     rotation: 0,
     transformOrigin: "center center", 
     ease: "linear"
@@ -104,12 +104,12 @@ window.addEventListener("scroll", appear);
     scrollTrigger:{
       trigger: ".actionDecalageCompetences",
       start: "top 75%",
-      end: "top 40%",
+      end: "top 55%",
       toggleActions: "restart none reverse reset",
       scrub: 0.6,
       markers: false
     },
-    x: 220,
+    x: 140,
     rotation: 0,
     transformOrigin: "center center", 
     ease: "linear"

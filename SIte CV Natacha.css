@@ -400,7 +400,7 @@ h3{
     flex-basis: 60%;
 }
 
-.bloc-compétences ul li{
+.bloc-compétences ul li,p{
     list-style:disc;
     list-style-position: inside;
     line-height: calc(0.7rem + 1.3vh);
@@ -413,6 +413,7 @@ h3{
     padding-bottom: 0.4rem;
     flex-basis: 40%;
     width: 100%;
+    font-size: calc(0.9rem + 0.2vh);
 }
 
 
@@ -563,11 +564,16 @@ h3{
     position: relative;
     display: flex;
     flex-direction: column;
+    flex: auto;
     justify-content: center;
+    min-height: 600px;
     height: calc(100vh - 36px);
     background-color: var(--backgroung-gris);
     line-height: 1.5rem;
+}
 
+#contact p{
+    padding: 0.5rem;
 }
 
 .item-contact{
@@ -608,14 +614,32 @@ h3{
 
 #contact .item-contact p{
     display: flex;
-    height: fit-content;
     flex-grow: 0;
-
 }
+
+.rencontre{
+    font-size: 0.9rem;
+}
+
 
 .bold{
     font-weight: bold;
 }
+
+.item-contact-petit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.item-contact-petit i{
+    cursor: pointer;
+    color: rgb(3, 3, 91);
+}
+
+
+
 
 
 /*Section animation*/
@@ -632,6 +656,10 @@ h3{
     opacity: 1;
 }
 
+
+.rotate.active{
+    animation: rotation 1s;
+}
 
 .appear{
     opacity: 0;
@@ -672,7 +700,14 @@ h3{
   }
 
 
-
+  @keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 
 
   /* non utilisées*/

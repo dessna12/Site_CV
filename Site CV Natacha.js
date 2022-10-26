@@ -66,6 +66,23 @@ function appear() {
 window.addEventListener("scroll", appear);
 
 
+function rotate() {
+  var rotate = document.querySelectorAll(".rotate");
+
+  for(let i = 0; i < rotate.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = rotate[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      rotate[i].classList.add("active");
+    }else{
+      rotate[i].classList.remove("active")
+    }
+  }
+}
+
+window.addEventListener("scroll", rotate);
 
 
 

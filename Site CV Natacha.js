@@ -71,20 +71,6 @@ window.addEventListener("scroll", appear);
 
 //GSAP
 
-  gsap.to(".box", {
-    scrollTrigger: {
-      trigger: ".box",
-      start: "top 75%",
-      end: "top 25%",
-      scrub: 0.6,
-      markers: false
-    },
-    x: 50,
-    rotation: 0,
-    transformOrigin: "center center", 
-    ease: "Power2.easeInOut"
-  });
-
   gsap.to(".actionDecalageParcours", {
     scrollTrigger:{
       trigger: ".actionDecalageParcours",
@@ -124,11 +110,38 @@ window.addEventListener("scroll", appear);
       scrub: 0.6,
       markers: false
     },
-    x: 220,
+    x: 140,
     rotation: 0,
     transformOrigin: "center center", 
     ease: "linear"
   });
 
+  gsap.to(".actionDecalageExperience", {
+    scrollTrigger:{
+      trigger: ".actionDecalageExperience",
+      start: "top 75%",
+      end: "top 40%",
+      toggleActions: "restart none reverse reset",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 140,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "linear"
+  });
 
-
+  gsap.to(".actionDecalageContact", {
+    scrollTrigger:{
+      trigger: ".actionDecalageContact",
+      start: "top 75%",
+      end: "top 40%",
+      toggleActions: "restart none reverse reset",
+      scrub: 0.6,
+      markers: false
+    },
+    x: 140,
+    rotation: 0,
+    transformOrigin: "center center", 
+    ease: "linear"
+  });

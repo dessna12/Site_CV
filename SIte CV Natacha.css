@@ -561,8 +561,8 @@ h3{
 /****************************/
 
 #contact{
-    position: relative;
-    display: flex;
+    position: static;
+    display: block;
     flex-direction: column;
     flex: auto;
     justify-content: center;
@@ -571,6 +571,15 @@ h3{
     background-color: var(--backgroung-gris);
     line-height: 1.5rem;
 }
+
+#cursus > .main-text{
+    justify-content: space-between;
+    height: 90%;
+    padding-top: 10px;
+
+}
+
+
 
 #contact p{
     padding: 0.5rem;
@@ -631,6 +640,7 @@ h3{
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    text-decoration: none;
 }
 
 .item-contact-petit i{
@@ -638,8 +648,9 @@ h3{
     color: rgb(3, 3, 91);
 }
 
-
-
+.item-contact-petit a{
+    text-decoration: none;
+}
 
 
 /*Section animation*/

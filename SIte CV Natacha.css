@@ -98,9 +98,10 @@ nav a {
 }
 
 
+
 nav ul{
     display:none;
-    background-color: var(--menu-gris);
+    background-color: inherit;
     list-style-type: none;
     text-align: inherit;
 }
@@ -241,6 +242,7 @@ p{
     border-radius: 10px;
     animation: pop 0.5s linear 3.5s forwards;
     opacity: 0;
+
 }
 
 
@@ -282,7 +284,7 @@ p{
     position: relative; /* absolute*/
     top:0;
     margin: 20px 10px 15px;
-    width: 85%;
+    width: 100%;
     display: block;
 }
 
@@ -740,41 +742,94 @@ h3{
 
 
 
-/*.reveal.rouge{
-    position: relative;
-    left: 300px;
-    transform: translateX(-300px);
-    transition: 0.5s linear;
-    transition-delay: 2s;
-}
-
-
-.reveal.blanc{
-    position: relative;
-    transform: translateX(200px);
-    transition: 0.5s linear;
-}
-
-.reveal.rouge.active{
-    transform: translateX(0);
-}
-
-.reveal.rouge.active{
-    transform: translateX(0);
-}
-*/
-
-
-
 
 /*Styles spécifiques pour les écrans de taille moyenne type tablette*/
-@media screen and (min-width: 780px) and (max-width: 979px){
+@media screen and (min-width: 700px) and (max-width: 979px){
+    
+    /****** SECTION NAVIGATION ******/
+
+    nav{
+        height: 36px;
+        align-items: center;
+    }
+
+    #photo-profile{
+        display: none;
+    }
+
+    #burger-menu{
+        font-size: 0.88rem;
+        padding-right: 0.5rem;
+
+    }
+    
+    nav label{
+        display: none;
+    }
+    
+    nav a {
+        padding: .4em .7em;
+    }
+
+    nav ul{
+        display:flex;
+    }
+    
+    .burger{
+        display: none;
+    }
+    
+    .element-menu{
+        position: relative;
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+    }
+
+    nav ul li a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #ab5d5da7;
+    border-right: 3px solid var(--brique);
+    transform: translate(-100%, 50%);
+    }
+
+    nav ul li a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #ab5d5da7;
+    border-left: 3px solid var(--brique);
+    transform: translate(100%, -50%)
+    }
+
+    nav ul li a:hover:before,
+    nav ul li a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+    }
+
+    nav a:hover {
+    color: var(--brique);
+    }
+
+    /****** SECTION ACCUEIL ******/
+
     #accueil{
         line-height: 1.5em;
+        justify-content:space-around;
     }
     
     #image-cover{
-        background-image:url("img/JB7A0519.jpg");    
+        background-image:url("img/JB7A0519_L.jpg");
     }
 
     h1{
@@ -787,8 +842,79 @@ h3{
     }
 
     #accueil> p,h1{
-        padding: 5px 15px;
+        padding: 5px 20px;
     }
+
+
+    /* #accueil .boutons{
+        justify-content: right;
+        display: flex;
+        position: relative;
+        margin-bottom: 3px;
+
+    }
+    
+    
+    #accueil .bouton a{
+        display: flex;
+        margin-right: 0.8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        justify-content: center;
+        text-align: center;
+        width: 100px;
+        padding: calc(4px + 0.6vh) 65px;
+        border-radius: 10px;
+        animation: pop 0.5s linear 3.5s forwards;
+        opacity: 0;
+    } */
+
+
+    #accueil .bouton a:hover{
+        transition: 0.5s;
+        letter-spacing: 2px;
+    }
+    
+
+    /****** SECTION PARCOURS ******/
+    
+    .titre{
+        margin: 20px 20px 15px;
+    }
+
+
+    .main-text{
+        position: relative;
+        justify-self: space-around;
+        margin: 20px 60px 40px;
+        flex-basis: 80%;
+        flex-shrink: 1;
+        flex-grow: 0;
+        /* font-size: calc(0.75rem + 0.7vw); */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        line-height: calc(0.7rem + 1.3vh);
+        border: red 1px solid;
+    }
+    
+    .main-text p{
+        margin-top: 10px;
+        padding: 0 20px;
+        display: block;
+        flex-grow: 1;
+        line-height: calc(0.7rem + 1.3vh);
+        font-size: 1rem;
+        position: relative;
+    }
+
+
+
+
+
+
+
 }
 
 

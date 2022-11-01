@@ -29,6 +29,7 @@ html{
     scroll-behavior: smooth;
     color: var(--font-black);
     font-size: calc(15px + 0.390625vw);
+    overflow-x: hidden;
 }
 
 
@@ -62,6 +63,7 @@ nav{
     transition: 0,5s;
     z-index: 1;
     border-bottom: grey solid 1px;
+
 }
 
 #photo-profile{
@@ -285,7 +287,7 @@ p{
     position: relative; /* absolute*/
     top:0;
     margin: 20px 10px 15px;
-    width: 100%;
+    align-self: flex-start;
     display: block;
 }
 
@@ -518,7 +520,6 @@ h3{
     /* height: calc(2*(100vh - 38px)); */
     background-color: var(--font-black);
     line-height: 1.5em;
-    border: #3B3838 solid;
 }
 
 .item-experience{
@@ -565,30 +566,43 @@ h3{
 /*****************************/
 /********** CONTACT *********/
 /****************************/
-
 #contact{
-    position: static;
-    display: block;
+    position: relative;
+    display: flex;
+    flex-shrink: 1;
     flex-direction: column;
-    flex: auto;
     justify-content: center;
-    min-height: 600px;
+    min-height: calc(100vh - 36px);
     height: calc(100vh - 36px);
     background-color: var(--backgroung-gris);
     line-height: 1.5rem;
+    box-sizing: border-box;
+    border: red 1px solid;
+    overflow: hidden;
+
 }
 
-#cursus > .main-text{
+#contact .titre{
+    margin: 20px 20px 15px;
+    position: relative;
+}
+
+#contact > .main-text{
+    display: flex;
+    align-self: center;
+    width: 75%;
+    flex-shrink: 1;
     justify-content: space-between;
-    height: 90%;
-    padding-top: 10px;
-
+    /* padding-top: 10px; */
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: inherit;
+    border: yellow 1px solid;
 }
 
-
-
-#contact p{
-    padding: 0.5rem;
+#contact .main-text p{
+    padding: 0.3rem;
+    flex-grow: 0;
 }
 
 .item-contact{
@@ -596,11 +610,10 @@ h3{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    flex-basis: 20%;
-    margin: 5%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 15px;
     font-size: calc(15px + 0.390625vw);
 
 }
@@ -615,15 +628,10 @@ h3{
     color:#9B59B6 ;
 }
 
-.background-blue{
-    background-color:#E0EFF9 ;
-    color: #3498DB;
-}
-
 #contact i{
     font-size:calc(1.5rem + 1.3vh);
     display: flex;
-    padding: 1rem;
+    padding: 0.5rem;
 
 }
 
@@ -651,7 +659,7 @@ h3{
 
 .item-contact-petit i{
     cursor: pointer;
-    color: rgb(3, 3, 91);
+    color: rgb(70, 70, 70);
 }
 
 .item-contact-petit a{
@@ -687,6 +695,30 @@ h3{
     opacity: 1;
 }
 
+
+.reveal-left{
+    position: relative;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s ease;
+}
+  
+.reveal-left.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal-right{
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s ease;
+}
+  
+.reveal-right.active{
+    transform: translateX(0);
+    opacity: 1;
+}
 
 
 
@@ -748,7 +780,7 @@ h3{
 
 
 /*Styles spécifiques pour les écrans de taille moyenne type tablette*/
-@media screen and (min-width: 700px) and (max-width: 979px){
+@media screen and (min-width: 650px) and (max-width: 979px){
     
     /****** SECTION NAVIGATION ******/
     nav{
@@ -933,69 +965,17 @@ h3{
 
 
     /****** SECTION CURSUS ******/
-    /* Zone de travail */
-
-    #cursus{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        /* height: calc(2*(100vh - 38px)); */
-        background-image: url("/img/white-paper-texture-background.jpg"); /* Image de Vectonauta sur Freepik" */
-        background-size: cover;
-        background-position: right;
-        line-height: 1.5em;
-    }
-    
-    
-    #cursus .gris{
-        background-color: #D0CECE;
-    }
-    
-    
     #cursus > .main-text{
-        justify-content: space-between;
-        height: 90%;
-        padding-top: 10px;
         align-items: flex-start;
     }
-    
+
     .item-cursus{
         width: 70%;
-        border-radius: 10px;
-        box-shadow: 0 17px 20px rgba(0,0,0, 0.55);
-        background-color: whitesmoke;
-        border: solid 1px rgba(160, 160, 160, 0.568);
-        padding: 10px;
-        align-items:initial;
         margin: 20px 30px;
-        font-size: smaller;
-        line-height: calc(0.7rem + 1.3vh);
         transition: border-top-left-radius,border-bottom-left-radius, border-left, box-shadow 0.2s; 
         transition: transform 1s, position 1s, opacity 1s;
-        /* transition: left 0.41s; */
     }
-    
-    
-    #cursus h3{
-        font-size: 1rem;
-    }
-    
-    .item-cursus > h4{
-        color: #AB5D5D;
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-    }
-    
-    #cursus i{
-        padding-right: 1rem;
-    }
-    
-    .item-cursus p{
-        line-height: calc(0.45rem + 1.3vh);
-    }
-
-
-    
+       
     /* The actual timeline (the vertical ruler) */
     #cursus .main-text::before {
         content: '';
@@ -1008,7 +988,6 @@ h3{
         margin: 0;
         padding: 0;
     }
-
 
     .item-cursus:before{
         content:'';
@@ -1024,7 +1003,6 @@ h3{
         padding: 0;
         transition: none;
     }
-
 
     .item-cursus:hover{
         border-top-left-radius: 10px;
@@ -1045,16 +1023,47 @@ h3{
         transition: 0.28s;       
     }
 
-    /* fin de zone*/
+    /****** SECTION EXPERIENCE ******/
+    #experience-pro{
+        align-items: center;
+    }
 
+    #experience-pro > .main-text{
+        width: 70%;
+    }
 
+    .item-experience{
+        width: 100%;
+        margin-bottom: 40px;
+        transition: filter 0.3s, opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    
+    #experience-pro h3{
+        margin: 0;
+    }
+    
+    #experience-pro .main-text:hover .item-experience{
+        filter:blur(3px);
+        opacity:.5;
+        transform: scale(.98);
+        box-shadow:none;
+    }
 
+    #experience-pro .main-text:hover .item-experience:hover{
+        transform:scale(1.1);
+        filter:blur(0px);
+        opacity:1;
+        box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+    }
 
+    /****** SECTION CONTACT ******/                    
+    .item-contact-petit .fa-linkedin:hover{
+        color: #0A66C2;
+    }
 
-
-
-
-
+    .item-contact-petit .fa-github:hover{
+        color: #161B22;
+    }
 }
 
 

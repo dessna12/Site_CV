@@ -24,12 +24,15 @@ checkboxMenu.addEventListener('change', ($event) => {
     }
 });
 
+// fait apparaitre les blocs formations et cursus
+window.addEventListener("scroll", appear);
+window.addEventListener("scroll", reveal);
 
 
 
 //FUNCTIONS
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    var reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
@@ -44,7 +47,7 @@ function reveal() {
     }
   }
   
-  window.addEventListener("scroll", reveal);
+
 
 
 function appear() {
@@ -63,7 +66,8 @@ function appear() {
   }
 }
 
-window.addEventListener("scroll", appear);
+
+
 
 
 function rotate() {

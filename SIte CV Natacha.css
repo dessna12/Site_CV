@@ -247,7 +247,7 @@ p{
     width: 100px;
     padding: calc(4px + 0.6vh) 10px; /* 7px c'est pas mal */ 
     border-radius: 10px;
-    animation: pop 0.5s linear 3.5s forwards;
+    animation: pop 0.5s linear 3.5s 1 forwards;
     opacity: 0;
 }
 
@@ -349,6 +349,7 @@ section h2{
     z-index: 0;
     box-sizing: border-box;
 }
+
 
 .noir{
     background-color: var(--font-black);
@@ -778,31 +779,27 @@ h3{
 
 
   @keyframes open{
-    from{
-        width: 0%;
-    }
-    to{
-        width: 320px;
-        color: whitesmoke;
-    }
+    from { width: 0%; }
+    to{ width: 320px; color: whitesmoke; }
   }
 
   @keyframes open-sous-titre1{
-    from{
-        width: 0%;
-    }
-    to{
-        width: 168px; /*168*/
-    }
+    from{ width: 0%;}
+    to{ width: 168px; /*168*/}
   }
 
   @keyframes open-sous-titre2{
-    from{
-        width: 0;
-    }to{
-        width: 129px;
-    }
+    from{ width: 0; }
+    to{ width: 129px; }
   }
+
+
+  @keyframes bounce{
+    0% { transform: scale(1,1); }
+    50% { transform : scale(1.1,1.1);}
+    100% { transform: scale(1,1);}
+  }
+
 
 
   /* non utilisées*/
@@ -941,8 +938,9 @@ h3{
     }
 
     #accueil .bouton a:hover{
-        transition: 2s ease;
+        transition: 1s ease;
         transform: scale(1.1,1.1);
+        letter-spacing: 0.1rem;
     }
     
 
@@ -1262,7 +1260,7 @@ h3{
         white-space: nowrap;
         line-height: 1.5;
         width: 100%;
-        margin-left: 29%;
+        margin-left: 31%;
     }
 
 
@@ -1281,12 +1279,18 @@ h3{
 
     .titre-h2-PC{
         font-size: 1.1rem;
-        margin-left: 29%;
+        margin-left: 33%;
         position: relative;
         white-space: nowrap;
         display: inline-block;
         width: 100%;
         padding-top: 0.5rem;
+        animation: showTopText 0.5s;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+        top: 0;
+        transform: translate(0, 100%);
+        opacity: 0;
         
     }
     
@@ -1313,10 +1317,7 @@ h3{
         margin-left: 170px;
         margin-right: 10px;
         margin-top: 0.2rem;
-
     }
-
-
 
     p{
         line-height: 1rem;
@@ -1349,7 +1350,7 @@ h3{
         width: 130px;
         padding: calc(4px + 0.6vh) 20px; 
         border-radius: 10px;
-        animation: pop 0.5s linear 3.5s forwards;
+        animation: pop 0.5s linear 3.5s 1 forwards;
         opacity: 0;
     }
 
@@ -1359,20 +1360,32 @@ h3{
     }
 
     #accueil .bouton a:hover{
-        transition: 0.7s ease;
+        transition: 1s ease;
         transform: scale(1.1,1.1);
+        letter-spacing: 0.1rem;  
     }
     
 
     /****** SECTION PARCOURS ******/
     .titre{
-        margin: 20px 20px 15px;
+        margin: 20px 300px 15px;
+    }
+
+    section h2{
+        color: var(--brique);
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        /*border-bottom:#AB5D5D solid 5px;*/
+        padding: 10px;
     }
 
     .main-text{
-        margin: 20px 60px 40px;
-        flex-basis: 80%;
+        width: 60%;
+        margin: 30px 0;
+        align-self: center;
         flex-grow: 1;
+        border: red 1px solid;
     }
     
     #parcours .main-text p{
@@ -1382,7 +1395,7 @@ h3{
         font-size: 0.9rem;
     }
 
-    #parcours .hide-mobile{
+    #parcours .hide-tablette{
         display : inline-block;
         float: right;
         font-size: 2.5rem;
@@ -1403,18 +1416,32 @@ h3{
 
     /****** SECTION COMPETENCES ******/
     #competences{
-        min-height: calc(100vh - 30px);
+        height: 100vh;
+        position: relative;
+    }
+
+    #competences .main-text{
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* flex: 1 1 400px; */
+        margin: 20px 20px 40px;
+        height: 80%;
+        align-content: space-around;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .encapsule-titre-icone{
         display: flex;
         justify-items: center;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
 
     .bloc-compétence{
-        flex-basis: 75%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width: auto;
     }
 
     .bloc-compétence i{
@@ -1422,8 +1449,26 @@ h3{
         float: left;
     }
 
+    .bloc-compétence p{
+        text-align: left;
+    }
+
+    .main-text .bloc-langage{
+        flex-basis: 70%;
+        height: 80vh;
+        margin-bottom: 100px;
+    }
+
+    #bloc-environnement{
+        flex-basis: 20%;
+    }
+
+    #bloc-langue{
+        flex-basis: 20%;
+    }
+
     .fa-code{
-        margin-bottom: 0.7rem;
+        margin-bottom: 0rem;
     }
 
     h3{
@@ -1431,6 +1476,8 @@ h3{
         width: 100%;
         justify-content: center;
         margin: 0;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
     }
     
     #competences .environnement-div{
@@ -1448,22 +1495,28 @@ h3{
 
     #competences h4{
         flex-basis: 30%;
+        padding: 0 0.6rem;
     }
     
     .bloc-langue{
-        flex-direction: row;
+        flex-direction: column;
     }
 
-
+    .langues-parlées p{
+        padding: 0 0.6rem;
+        text-align: center;
+    }
 
     /****** SECTION CURSUS ******/
     #cursus > .main-text{
         align-items: flex-start;
+        width: 60%;
     }
 
     .item-cursus{
         width: 70%;
-        margin: 20px 30px;
+        max-width: 600px;
+        margin: 20px 40px;
         transition: border-top-left-radius,border-bottom-left-radius, border-left, box-shadow 0.2s; 
         transition: transform 1s, position 1s, opacity 1s;
     }
@@ -1476,7 +1529,7 @@ h3{
         background-color: var(--font-black);
         top: 0;
         bottom: 0;
-        left: 75vw;
+        left: 55vw;
         margin: 0;
         padding: 0;
     }
@@ -1484,13 +1537,13 @@ h3{
     .item-cursus:before{
         content:'';
         position: absolute;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         background-color: var(--backgroung-gris);
         border: var(--font-black) 8px solid;
         top: 40%;
-        left: calc(75vw - 41px);
+        left: calc(54.1vw - 43px);
         margin: 0;
         padding: 0;
         transition: none;
@@ -1510,10 +1563,38 @@ h3{
     }
 
     .item-cursus:hover::before{
-        left: calc(75vw - 48px); 
+        left: calc(54vw - 46px); 
         transform: scale(1.3,1.3);
         transition: 0.28s;       
     }
+
+    #cursus h3{
+        font-size: 1.1rem;
+    }
+    
+    .item-cursus > h4{
+        color: #AB5D5D;
+        font-size: 1.05rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    #cursus i{
+        padding-right: 1rem;
+    }
+    
+    .item-cursus p{
+        line-height: calc(0.45rem + 1.3vh);
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    .item-cursus p:first-of-type{
+        font-size: 1rem;
+        padding-bottom: 0.7rem;
+    }
+
+
+
 
     /****** SECTION EXPERIENCE ******/
     #experience-pro{
@@ -1521,12 +1602,13 @@ h3{
     }
 
     #experience-pro > .main-text{
-        width: 62%;
+        width: 45%;
     }
 
     .item-experience{
         width: 100%;
-        margin-bottom: 40px;
+        margin: 50px 0;
+        padding: 10px 30px;
         transition: filter 0.3s, opacity 0.3s, transform 0.3s, box-shadow 0.3s;
     }
     
@@ -1547,6 +1629,24 @@ h3{
         opacity:1;
         box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
     }
+
+    .entreprise{
+        font-size: 1.1rem;
+        padding: 0.05rem 0 0.6rem;
+        font-weight: 500;
+        color: rgb(7, 7, 106);
+        text-align: left;
+    }
+    
+    .item-experience li{
+        list-style: disc inside;
+        line-height: 1rem;
+        padding-bottom: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+
+
 
     /****** SECTION CONTACT ******/                    
     .item-contact-petit .fa-linkedin:hover{

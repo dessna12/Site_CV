@@ -7,6 +7,7 @@
 --brique: #AB5D5D;
 --font-black: #3B3838;
 --vert-eau: #17c5b7;
+--cerise: #ea505d;
 }
 
 .material-symbols-outlined {
@@ -1284,7 +1285,7 @@ h3{
         white-space: nowrap;
         display: inline-block;
         width: 100%;
-        padding-top: 0.5rem;
+        padding-top: 0.05rem;
         animation: showTopText 0.5s;
         animation-delay: 1.2s;
         animation-fill-mode: forwards;
@@ -1297,19 +1298,25 @@ h3{
     .background-grey-animation1{
         display: inline-block;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: var(--brique);
         padding: 0.07rem 0;
         width: 0;
-        animation: open-sous-titre1 0.9s ease 2.5s forwards;
+        /* animation: open-sous-titre1 0.9s ease 2.5s forwards; */
+    }
+
+    .background-grey-animation1 strong{
+        color: whitesmoke;
+        
     }
 
     .background-grey-animation2{
         display: inline-block;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: #F0F0F2;
         padding: 0.07rem 0;
         width: 0;
-        animation: open-sous-titre2 0.9s ease 2.5s forwards;
+        line-height: 1.2;
+        /* animation: open-sous-titre2 0.9s ease 2.5s forwards; */
     }
 
 
@@ -1317,6 +1324,10 @@ h3{
         margin-left: 170px;
         margin-right: 10px;
         margin-top: 0.2rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+        position: relative;
+        top: 2px;
     }
 
     p{
@@ -1368,16 +1379,25 @@ h3{
 
     /****** SECTION PARCOURS ******/
     .titre{
-        margin: 20px 300px 15px;
+        margin: 20px 19% 15px;
     }
 
     section h2{
         color: var(--brique);
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-transform: uppercase;
         /*border-bottom:#AB5D5D solid 5px;*/
         padding: 10px;
+    }
+
+    .decalage{
+        width: 75%;
+        height: 5px;
+        margin-top: 0px;
+        margin-left: 10px;
+        position: static;
+        background-color: var(--brique);
     }
 
     .main-text{
@@ -1510,15 +1530,15 @@ h3{
     /****** SECTION CURSUS ******/
     #cursus > .main-text{
         align-items: flex-start;
-        width: 60%;
+        width: 85%;
     }
 
     .item-cursus{
-        width: 70%;
+        width: 40%;
         max-width: 600px;
         margin: 20px 40px;
-        transition: border-top-left-radius,border-bottom-left-radius, border-left, box-shadow 0.2s; 
-        transition: transform 1s, position 1s, opacity 1s;
+        transition: border-top-left-radius 0.2s,border-bottom-left-radius 0.2s, border-left 0.2s, box-shadow 0.2s; 
+        transition: transform 2s, position 1s, opacity 1s;
     }
        
     /* The actual timeline (the vertical ruler) */
@@ -1529,12 +1549,17 @@ h3{
         background-color: var(--font-black);
         top: 0;
         bottom: 0;
-        left: 55vw;
+        left: 50%;
+        /* left: 40vw; */
         margin: 0;
         padding: 0;
     }
 
-    .item-cursus:before{
+    .item-cursus:nth-child(even){
+        left:51%;
+    }
+
+    .item-cursus:nth-child(even):before{
         content:'';
         position: absolute;
         width: 20px;
@@ -1543,16 +1568,29 @@ h3{
         background-color: var(--backgroung-gris);
         border: var(--font-black) 8px solid;
         top: 40%;
-        left: calc(54.1vw - 43px);
         margin: 0;
         padding: 0;
-        transition: none;
+        left: calc(-1.5vw - 46px);
+    }
+
+    .item-cursus:nth-child(odd):before{
+        content:'';
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background-color: var(--backgroung-gris);
+        border: var(--font-black) 8px solid;
+        top: 40%;
+        margin: 0;
+        padding: 0;
+        left: calc(41.8vw - 46px);
     }
 
     .item-cursus:hover{
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        transition: 0.2s linear;
+        transition: 0.1s linear;
         border-left: 8px solid rgb(23, 197, 183);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
@@ -1562,11 +1600,16 @@ h3{
         transition: 0.2s;
     }
 
-    .item-cursus:hover::before{
-        left: calc(54vw - 46px); 
-        transform: scale(1.3,1.3);
-        transition: 0.28s;       
+    .item-cursus:nth-child(odd):hover::before{
+        left: calc(41.5vw - 46px); 
+        transform: scale(1.4,1.4);     
     }
+
+    .item-cursus:nth-child(even):hover::before{
+        left: calc(-1.8vw - 46px); 
+        transform: scale(1.4,1.4);     
+    }
+
 
     #cursus h3{
         font-size: 1.1rem;
@@ -1602,11 +1645,14 @@ h3{
     }
 
     #experience-pro > .main-text{
-        width: 45%;
+        width: 85%;
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
 
     .item-experience{
-        width: 100%;
+        width: 45%;
         margin: 50px 0;
         padding: 10px 30px;
         transition: filter 0.3s, opacity 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -1616,22 +1662,23 @@ h3{
         margin: 0;
     }
     
-    #experience-pro .main-text:hover .item-experience{
+
+    .blurred{
         filter:blur(3px);
         opacity:.5;
         transform: scale(.98);
         box-shadow:none;
     }
 
-    #experience-pro .main-text:hover .item-experience:hover{
+    #experience-pro .main-text .item-experience:hover{
         transform:scale(1.1);
         filter:blur(0px);
         opacity:1;
         box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
-    }
+    } 
 
     .entreprise{
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 0.05rem 0 0.6rem;
         font-weight: 500;
         color: rgb(7, 7, 106);
@@ -1642,13 +1689,43 @@ h3{
         list-style: disc inside;
         line-height: 1rem;
         padding-bottom: 0.4rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
 
 
 
-    /****** SECTION CONTACT ******/                    
+    /****** SECTION CONTACT ******/                       
+    #contact .titre{
+        margin: 20px 10% 15px;
+        position: relative;
+    }
+    
+    #contact .main-text {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #contact .main-text p{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .item-contact{
+        width: 40%;
+        margin:0 20px 15px 20px;
+    }
+
+    .rencontre{
+        width: 80%;
+    }
+
+    .item-contact-petit{
+        width: 80%;
+    }
+
     .item-contact-petit .fa-linkedin:hover{
         color: #0A66C2;
     }

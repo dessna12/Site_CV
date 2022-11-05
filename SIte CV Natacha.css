@@ -941,7 +941,7 @@ h3{
     #accueil .bouton a:hover{
         transition: 1s ease;
         transform: scale(1.1,1.1);
-        letter-spacing: 0.1rem;
+        box-shadow: 0 30px 40px rgba(0,0,0,0.3); 
     }
     
 
@@ -1373,10 +1373,9 @@ h3{
     #accueil .bouton a:hover{
         transition: 1s ease;
         transform: scale(1.1,1.1);
-        letter-spacing: 0.1rem;  
+        box-shadow: 0 30px 40px rgba(0,0,0,0.3); 
     }
     
-
     /****** SECTION PARCOURS ******/
     .titre{
         margin: 20px 19% 15px;
@@ -1405,7 +1404,6 @@ h3{
         margin: 30px 0;
         align-self: center;
         flex-grow: 1;
-        border: red 1px solid;
     }
     
     #parcours .main-text p{
@@ -1648,11 +1646,11 @@ h3{
         width: 85%;
         flex-direction: row;
         flex-wrap: wrap;
-
     }
 
     .item-experience{
         width: 45%;
+        height: 40vh;
         margin: 50px 0;
         padding: 10px 30px;
         transition: filter 0.3s, opacity 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -1683,6 +1681,7 @@ h3{
         font-weight: 500;
         color: rgb(7, 7, 106);
         text-align: left;
+        font-weight: bold;
     }
     
     .item-experience li{
@@ -1692,7 +1691,10 @@ h3{
         font-size: 0.8rem;
     }
 
-
+    .item-experience p:first-of-type{
+        text-align: left;
+        padding-bottom: 0.5rem;
+    }
 
 
     /****** SECTION CONTACT ******/                       

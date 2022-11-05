@@ -4,6 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 const elementMenu = document.querySelectorAll("a.element-menu");
 const burgerMenu = document.querySelector("span.material-symbols-outlined");
 const checkboxMenu = document.getElementById("mobile");
+const blurItems = document.querySelectorAll("div.blur");
 
 //EVENT LISTENER
 
@@ -27,8 +28,26 @@ checkboxMenu.addEventListener('change', ($event) => {
 // fait apparaitre les blocs formations et cursus
 window.addEventListener("scroll", appear);
 window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", rotate);
 
 
+// onmouseenter crée un blur pour les items de experience pro non mis en valeur + focus pour item mis en valeur
+for(let k=0; k<blurItems.length; k++){
+  blurItems[k].onmouseenter = function(event){
+    for (let i=0; i<blurItems.length ; i++ ){
+      blurItems[i].classList.add("blurred");
+    }
+  }
+}
+
+//onmouseleave retire le blur et le focus class
+for(let k=0; k<blurItems.length; k++){
+  blurItems[k].onmouseleave = function(event){
+    for (let i=0; i<blurItems.length ; i++ ){
+      blurItems[i].classList.remove("blurred");
+    }
+  }
+}
 
 //FUNCTIONS
 function reveal() {
@@ -68,8 +87,6 @@ function appear() {
 
 
 
-
-
 function rotate() {
   var rotate = document.querySelectorAll(".rotate");
 
@@ -86,7 +103,7 @@ function rotate() {
   }
 }
 
-window.addEventListener("scroll", rotate);
+
 
 
 

@@ -34,12 +34,14 @@
     <!--SECTION ACCUEIL -->
     <section id="accueil">
         <div id="repère-accueil" class="repère"></div>
-        <h1>Moi c'est Natacha Desse</h1>
-        <p class="titre-h2"><strong>Développeuse</strong> en formation <strong> Front/Back</strong></p>
+        <h1 class="hide-PC">Moi c'est Natacha Desse</h1>
+        <p class="titre-h2 hide-PC"><strong>Développeuse</strong> en formation <strong> Front/Back</strong></p>
 
         <div id="image-cover" class="flex ease">
-            <!-- Ajouter ici les différentes sources selon media port-->
-            <!--<img  class= "Amsterdam flex" src="img/JB7A0519_s.jpg" alt="Natacha Desse"> -->
+            <div class="hide-mobile">
+                <h1><span>Moi c'est</span><div class="background-color-animation">Natacha Desse</div></h1>
+                <span class="titre-h2-PC"><div class="background-grey-animation1"><strong>Développeuse</strong></div><span> en formation </span><div class="background-grey-animation2"><strong> Front/Back</strong></div></apan>
+            </div>
         </div>
 
         <p class="sous-titre"><em>A la recherche</em> de ma <em>prochaine</em> <strong>collaboration professionnelle</strong> dans le domaine de la <em>programmation.</em> 
@@ -63,17 +65,17 @@
         </div>
         <div class="main-text">
             
-            <p class="appear"><i class="fa-solid fa-chart-line hide-mobile bckg-grey"></i>Issue du secteur de la <em>finance</em> en <em>Gestion d’Actifs</em>, 
+            <p class="appear"><i class="fa-solid fa-chart-line hide-tablette bckg-grey"></i>Issue du secteur de la <em>finance</em> en <em>Gestion d’Actifs</em>, 
                 j’ai travaillé en tant qu’analyste financière dans les <em>Produits Structurés</em> à Lyxor 
                 ainsi qu’en tant qu’<em>Analyste Quant</em> au sein de Natixis IM Solutions.</p>
                 
-            <p class="appear"><i class="fa-solid fa-rocket hide-mobile bckg-brique"></i>J’ai par la suite eu une expérience à l’international à <em>Amsterdam</em> 
+            <p class="appear"><i class="fa-solid fa-rocket hide-tablette bckg-brique"></i>J’ai par la suite eu une expérience à l’international à <em>Amsterdam</em> 
                 en tant que Cheffe de Produits en charge des <em>lancements d’ETFs</em>.</p>
-            <p class="appear"><i class="fa-solid fa-laptop-code hide-mobile bckg-grey"></i>M’étant beaucoup intéressée à la <em>modélisation financière sous R </em>
+            <p class="appear"><i class="fa-solid fa-laptop-code hide-tablette bckg-grey"></i>M’étant beaucoup intéressée à la <em>modélisation financière sous R </em>
                 et ayant une logique algorithmique, je souhaite aujourd’hui me 
                 tourner vers une carrière de <strong>Concepteur/Développeur</strong> en passant 
                 par un parcours en <em>Alternance</em>.</p> 
-            <p class="appear"><i class="fa-solid fa-terminal hide-mobile bckg-brique"></i>La <strong>Programmation Orientée Objet</strong> est le type de programmation
+            <p class="appear"><i class="fa-solid fa-terminal hide-tablette bckg-brique"></i>La <strong>Programmation Orientée Objet</strong> est le type de programmation
                 qui m’attire le plus. Surement l’une des plus difficile à maitriser, 
                 j’en apprécie les possibilités de <em>conception et de création.</em> 
                 Je la trouve complète et demande une véritable réflexion et <em>gestion de projet</em>.</p>
@@ -91,7 +93,7 @@
     
         <div class="main-text blanc">
             
-            <div class="bloc-compétence">
+            <div id="bloc-language" class="bloc-compétence bloc-langage">
                 
                 <div class="encapsule-titre-icone">
                     <i class="fa-solid fa-code rotate"></i>
@@ -130,7 +132,7 @@
                 </div>
             </div>
             
-            <div class="bloc-compétence">
+            <div id="bloc-environnement" class="bloc-compétence">
                 <div class="encapsule-titre-icone">
                     <i class="fa-solid fa-display rotate"></i>
                     <h3 id="h3-environnement">Environnement de travail</h3>
@@ -139,15 +141,15 @@
                 <div class="tableau-compétences environnement-tableau">
                     <div class="bloc-compétences environnement-div appear">
                         <ul class="list-environnement-travail">
-                            <li><h4>Docker</h4></li>
+                            <li><h4>Windows/Linux</h4></li>
                             <li><h4>Git</h4></li>
-                            <li><h4>Linux</h4></li>
+                            <li><h4>Docker</h4></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="bloc-langue bloc-compétence appear">
+            <div id="bloc-langue" class="bloc-langue bloc-compétence appear">
                 <i class="fa-solid fa-earth-americas rotate"></i>
                 <h3>Langues parlées</h3>
                 <div class="langues-parlées">
@@ -236,7 +238,7 @@
         </div>
 
         <div class="main-text">
-            <div class="item-experience reveal-left">
+            <div class="item-experience reveal-left blur">
                 <div class="logo">
                     <h3>Product Manager</h3>
                     <img src="img/Vaneck-logo.jpeg" alt="Vaneck logo">
@@ -250,7 +252,7 @@
                 </ul>
             </div>
 
-            <div class="item-experience reveal-right">
+            <div class="item-experience reveal-right blur">
                 <div class="logo">
                     <h3>Analyste Quantitatif</h3>
                     <img src="img/Natixis_logo.png" alt="Natixis logo">
@@ -264,7 +266,7 @@
                 </ul>
             </div>
 
-            <div class="item-experience reveal-left">
+            <div class="item-experience reveal-left blur">
                 <div class="logo">
                     <h3>Analyste Solutions Dédiées</h3>
                     <img src="img/logo-lyxor.jpg" alt="Lyxor logo">
@@ -278,7 +280,7 @@
                 </ul>
             </div>
 
-            <div class="item-experience reveal-right">
+            <div class="item-experience reveal-right blur">
                 <div class="logo">
                     <h3>Product Marketing</h3>
                     <img src="img/logo-lyxor.jpg" alt="Lyxor logo">
@@ -292,7 +294,7 @@
                 </ul>
             </div>
 
-            <div class="item-experience reveal-left">
+            <div class="item-experience reveal-left blur">
                 <div class="logo">
                     <h3>Consultante</h3>
                     <img src="img/Wisedome-logo-xxs-bis.jpg" alt="Wisedome logo">

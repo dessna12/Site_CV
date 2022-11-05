@@ -59,7 +59,7 @@ nav{
     margin: 0 auto;
     background-color: var(--menu-gris);
     position: fixed;
-    overflow: hidden;
+    overflow-y: visible;
     display: flex;
     flex-direction: row;
     align-items: top;
@@ -152,6 +152,7 @@ nav input[type=checkbox]:checked + ul {
     flex-direction: column;
     box-sizing: border-box;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 #accueil> p,h1{
@@ -326,6 +327,10 @@ section h2{
     justify-content: space-around;
     align-items: center;
     line-height: calc(0.7rem + 1.3vh);
+}
+
+.main-text .hide-mobile{
+    display: none;
 }
 
 .main-text p{
@@ -542,6 +547,7 @@ h3{
     /* height: calc(2*(100vh - 38px)); */
     background-color: var(--font-black);
     line-height: 1.5em;
+    overflow-x: hidden;
 }
 
 .item-experience{

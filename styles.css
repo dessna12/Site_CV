@@ -30,7 +30,6 @@ html{
     scroll-behavior: smooth;
     color: var(--font-black);
     font-size: calc(15px + 0.390625vw);
-    overflow-x: hidden;
 }
 
 
@@ -293,6 +292,7 @@ p{
     margin: 20px 10px 15px;
     align-self: flex-start;
     display: block;
+    overflow-x: visible;
 }
 
 section h2{
@@ -599,8 +599,7 @@ h3{
     background-color: var(--backgroung-gris);
     line-height: 1.5rem;
     box-sizing: border-box;
-    overflow: hidden;
-
+    overflow-x: hidden;
 }
 
 #contact .titre{

@@ -329,7 +329,7 @@ section h2{
     line-height: calc(0.7rem + 1.3vh);
 }
 
-.main-text .hide-mobile{
+.main-text i{
     display: none;
 }
 

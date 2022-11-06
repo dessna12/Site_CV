@@ -669,6 +669,10 @@ h3{
     font-size: 0.9rem;
 }
 
+#contact .main-text strong{
+    display: block;
+    text-align: center;
+}
 
 .bold{
     font-weight: bold;
@@ -785,8 +789,8 @@ h3{
 
 
   @keyframes open{
-    from { width: 0%; }
-    to{ width: 320px; color: whitesmoke; }
+    from { width: 0%; background-color: #ea505d;}
+    to{ width: 100%; color: whitesmoke; background-color: #ea505d; }
   }
 
   @keyframes open-sous-titre1{
@@ -1263,77 +1267,65 @@ h3{
         font-size: 1.9rem;
         margin-top: 10px;
         position: relative;
+        display:inline-block;
         white-space: nowrap;
         line-height: 1.5;
-        width: 100%;
-        margin-left: 31%;
     }
 
+    .div-h1 p{
+        font-size: 1.9rem;
+        /* margin-top: 10px; */
+        line-height: 1.5;
+        display: flex;
+        width: fit-content;
+        padding: 0 0.5rem;
+        
+        animation: open 0.9s ease 2.5s forwards;
+    }
+
+    .div-h1{
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
 
       .background-color-animation{
-        display: inline-block;
+        display:inline;
         margin-left: 10px;
+        margin-right: 10px;
         position: absolute;
         padding-left: 0.5rem;
         color: var(--menu-gris);
-        background-color: #ea505d;
-        width: 0;
+        
+        /* width: 100%; */
         color: var(--font-black);
-        animation: open 0.9s ease 2.5s forwards;
+        /* width: fit-content; */
+
     }
 
 
     .titre-h2-PC{
-        font-size: 1.1rem;
-        margin-left: 33%;
+        display: block;
         position: relative;
-        white-space: nowrap;
-        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-top: 0.2rem;
         width: 100%;
+        text-align: center;
         padding-top: 0.05rem;
         animation: showTopText 0.5s;
         animation-delay: 1.2s;
         animation-fill-mode: forwards;
-        top: 0;
         transform: translate(0, 100%);
         opacity: 0;
-        
     }
     
-    .background-grey-animation1{
-        display: inline-block;
-        position: absolute;
-        background-color: var(--brique);
-        padding: 0.07rem 0;
-        width: 0;
-        /* animation: open-sous-titre1 0.9s ease 2.5s forwards; */
-    }
 
-    .background-grey-animation1 strong{
+    .titre-h2-PC strong:first-of-type{
         color: whitesmoke;
-        
     }
 
-    .background-grey-animation2{
-        display: inline-block;
-        position: absolute;
-        background-color: #F0F0F2;
-        padding: 0.07rem 0;
-        width: 0;
-        line-height: 1.2;
-        /* animation: open-sous-titre2 0.9s ease 2.5s forwards; */
-    }
-
-
-    .titre-h2-PC span{
-        margin-left: 170px;
-        margin-right: 10px;
-        margin-top: 0.2rem;
-        font-size: 1.1rem;
-        font-weight: 300;
-        position: relative;
-        top: 2px;
-    }
 
     p{
         line-height: 1rem;

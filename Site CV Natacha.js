@@ -6,6 +6,13 @@ const burgerMenu = document.querySelector("span.material-symbols-outlined");
 const checkboxMenu = document.getElementById("mobile");
 const blurItems = document.querySelectorAll("div.blur");
 
+
+// WAIT FOR WINDOW LOAD
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
 //EVENT LISTENER
 
 //Ferme menu lors d'un click sur la navigation 
